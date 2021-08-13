@@ -404,7 +404,7 @@
 
       var fullTimeResultCtx = document.getElementById('full_time_result');
       var fullTimeResult = new Chart(fullTimeResultCtx, {
-          type: 'line',
+          type: (fullTimeResultIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: fullTimeResultIdx,
               datasets: [{
@@ -457,7 +457,7 @@
 
       var underOverCtx = document.getElementById('under_over');
       var underOver = new Chart(underOverCtx, {
-          type: 'line',
+          type: (underOverIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: underOverIdx,
               datasets: [{
@@ -504,7 +504,7 @@
 
       var bothTeamsToScoreCtx = document.getElementById('both_teams_to_score');
       var bothTeamsToScore = new Chart(bothTeamsToScoreCtx, {
-          type: 'line',
+          type: (bothTeamsToScoreIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: bothTeamsToScoreIdx,
               datasets: [{
@@ -557,7 +557,7 @@
 
       var doubleChanceCtx = document.getElementById('double_chance');
       var doubleChance = new Chart(doubleChanceCtx, {
-          type: 'line',
+          type: (doubleChanceIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: doubleChanceIdx,
               datasets: [{
