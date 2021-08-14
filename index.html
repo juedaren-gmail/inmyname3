@@ -445,13 +445,13 @@
 	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
 </div>
 <script>
-  var URL = 'https://www.mql5.icu/test.json';
+  var URL = 'https://www.bounty.run/test.json';
   var imgUrl = "/images/"
   loadMatches();
 
   function loadMatches() {
     if (window.location.pathname == "/") {
-      fetch("https://www.mql5.icu/test.json")
+      fetch("https://www.bounty.run/test.json")
       .then(response => response.json())
       .then(data => {
         resultsLoop(data);
@@ -480,7 +480,7 @@
       } else {
       }
 
-      fetch("https://www.mql5.icu/test.json")
+      fetch("https://www.bounty.run/test.json")
       .then(response => response.json())
       .then(data => {
         resultsLoop2(data);
@@ -489,7 +489,7 @@
   }
 
   function mainMatch(id) {
-    fetch("https://www.mql5.icu/test.json")
+    fetch("https://www.bounty.run/test.json")
     .then(response => response.json())
     .then(arr => {
       var data = arr[id];
