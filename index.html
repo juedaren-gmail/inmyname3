@@ -547,20 +547,20 @@
               datasets: [{
                   label: '1',
                   data: fullTimeResult1,
-                  backgroundColor: fullTimeResultClr1,
-                  borderColor: fullTimeResultBdr1,
+                  backgroundColor: (fullTimeResultIdx.length > 3 ? fullTimeResultClr1[0] : fullTimeResultClr1),
+                  borderColor: (fullTimeResultIdx.length > 3 ? fullTimeResultBdr1[0] : fullTimeResultBdr1),
                   borderWidth: 1
               }, {
                   label: '2',
                   data: fullTimeResult2,
-                  backgroundColor: fullTimeResultClr2,
-                  borderColor: fullTimeResultBdr2,
+                  backgroundColor: (fullTimeResultIdx.length > 3 ? fullTimeResultClr2[0] : fullTimeResultClr2),
+                  borderColor: (fullTimeResultIdx.length > 3 ? fullTimeResultBdr2[0] : fullTimeResultBdr2),
                   borderWidth: 1
               }, {
                   label: 'X',
                   data: fullTimeResultX,
-                  backgroundColor: fullTimeResultClrX,
-                  borderColor: fullTimeResultBdrX,
+                  backgroundColor: (fullTimeResultIdx.length > 3 ? fullTimeResultClrX[0] : fullTimeResultClrX),
+                  borderColor: (fullTimeResultIdx.length > 3 ? fullTimeResultBdrX[0] : fullTimeResultBdrX),
                   borderWidth: 1
               }]
           },
@@ -600,14 +600,14 @@
               datasets: [{
                   label: 'O2.5',
                   data: underOver1,
-                  backgroundColor: underOverClr1,
-                  borderColor: underOverBdr1,
+                  backgroundColor: (underOverIdx.length > 3 ? underOverClr1[0] : underOverClr1),
+                  borderColor: (underOverIdx.length > 3 ? underOverBdr1[0] : underOverBdr1),
                   borderWidth: 1
               }, {
                   label: 'U2.5',
                   data: underOver2,
-                  backgroundColor: underOverClr2,
-                  borderColor: underOverBdr2,
+                  backgroundColor: (underOverIdx.length > 3 ? underOverClr2[0] : underOverClr2),
+                  borderColor: (underOverIdx.length > 3 ? underOverBdr2[0] : underOverBdr2),
                   borderWidth: 1
               }]
           },
@@ -647,14 +647,14 @@
               datasets: [{
                   label: 'Yes',
                   data: bothTeamsToScore1,
-                  backgroundColor: bothTeamsToScoreClr1,
-                  borderColor: bothTeamsToScoreBdr1,
+                  backgroundColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreClr1[0] : bothTeamsToScoreClr1),
+                  borderColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreBdr1[0] : bothTeamsToScoreBdr1),
                   borderWidth: 1
               }, {
                   label: 'No',
                   data: bothTeamsToScore2,
-                  backgroundColor: bothTeamsToScoreClr2,
-                  borderColor: bothTeamsToScoreBdr2,
+                  backgroundColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreClr2[0] : bothTeamsToScoreClr2),
+                  borderColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreBdr2[0] : bothTeamsToScoreBdr2),
                   borderWidth: 1
               }]
           },
@@ -700,20 +700,20 @@
               datasets: [{
                   label: '1X',
                   data: doubleChance1,
-                  backgroundColor: doubleChanceClr1,
-                  borderColor: doubleChanceBdr1,
+                  backgroundColor: (doubleChanceIdx.length > 3 ? doubleChanceClr1[0] : doubleChanceClr1),
+                  borderColor: (doubleChanceIdx.length > 3 ? doubleChanceBdr1[0] : doubleChanceBdr1),
                   borderWidth: 1
               }, {
                   label: '2X',
                   data: doubleChance2,
-                  backgroundColor: doubleChanceClr2,
-                  borderColor: doubleChanceBdr2,
+                  backgroundColor: (doubleChanceIdx.length > 3 ? doubleChanceClr2[0] : doubleChanceClr2),
+                  borderColor: (doubleChanceIdx.length > 3 ? doubleChanceBdr2[0] : doubleChanceBdr2),
                   borderWidth: 1
               }, {
                   label: '12',
                   data: doubleChanceX,
-                  backgroundColor: doubleChanceClrX,
-                  borderColor: doubleChanceBdrX,
+                  backgroundColor: (doubleChanceIdx.length > 3 ? doubleChanceClrX[0] : doubleChanceClrX),
+                  borderColor: (doubleChanceIdx.length > 3 ? doubleChanceBdrX[0] : doubleChanceBdrX),
                   borderWidth: 1
               }]
           },
