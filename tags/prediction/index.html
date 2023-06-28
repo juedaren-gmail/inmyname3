@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="We love soccer!">
   <meta name="author" content="InMy.Name">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.114.1">
 
   <!-- plugins -->
   
@@ -28,24 +28,19 @@
   <link rel="shortcut icon" href="https://www.inmy.name/images/favicon.png " type="image/x-icon">
   <link rel="icon" href="https://www.inmy.name/images/favicon.png " type="image/x-icon">
 
-  <!-- google analitycs -->
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKMV79J8W9"></script>
   <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-204943824-1', 'auto');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FKMV79J8W9');
   </script>
 
-</head><body>
+</head>
+<body>
 <!-- preloader start -->
 <div class="preloader">
   
@@ -657,7 +652,7 @@
 			cookieBox.classList.remove('cookie-box-hide');
 			cookieButton.onclick = function () {
 				Cookies.set('cookie-box', true, {
-					expires: 2
+					expires:  2 
 				});
 				cookieBox.classList.add('cookie-box-hide');
 			};

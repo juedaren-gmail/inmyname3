@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="this is meta description">
   <meta name="author" content="InMy.Name">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.114.1">
 
   <!-- plugins -->
   
@@ -28,24 +28,19 @@
   <link rel="shortcut icon" href="https://www.inmy.name/images/favicon.png " type="image/x-icon">
   <link rel="icon" href="https://www.inmy.name/images/favicon.png " type="image/x-icon">
 
-  <!-- google analitycs -->
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKMV79J8W9"></script>
   <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-204943824-1', 'auto');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FKMV79J8W9');
   </script>
 
-</head><body>
+</head>
+<body>
 <!-- preloader start -->
 <div class="preloader">
   
@@ -247,13 +242,13 @@
 	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
 </div>
 <script>
-  var URL = 'https://www.mql5.icu/test.json';
+  var URL = 'https://www.bounty.run/test.json';
   var imgUrl = "/images/"
   loadMatches();
 
   function loadMatches() {
     if (window.location.pathname == "/") {
-      fetch("https://www.mql5.icu/test.json")
+      fetch("https://www.bounty.run/test.json")
       .then(response => response.json())
       .then(data => {
         resultsLoop(data);
@@ -282,7 +277,7 @@
       } else {
       }
 
-      fetch("https://www.mql5.icu/test.json")
+      fetch("https://www.bounty.run/test.json")
       .then(response => response.json())
       .then(data => {
         resultsLoop2(data);
@@ -291,7 +286,7 @@
   }
 
   function mainMatch(id) {
-    fetch("https://www.mql5.icu/test.json")
+    fetch("https://www.bounty.run/test.json")
     .then(response => response.json())
     .then(arr => {
       var data = arr[id];
@@ -343,26 +338,26 @@
 
       var fullTimeResultCtx = document.getElementById('full_time_result');
       var fullTimeResult = new Chart(fullTimeResultCtx, {
-          type: 'line',
+          type: (fullTimeResultIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: fullTimeResultIdx,
               datasets: [{
                   label: '1',
                   data: fullTimeResult1,
-                  backgroundColor: fullTimeResultClr1,
-                  borderColor: fullTimeResultBdr1,
+                  backgroundColor: (fullTimeResultIdx.length > 3 ? fullTimeResultClr1[0] : fullTimeResultClr1),
+                  borderColor: (fullTimeResultIdx.length > 3 ? fullTimeResultBdr1[0] : fullTimeResultBdr1),
                   borderWidth: 1
               }, {
                   label: '2',
                   data: fullTimeResult2,
-                  backgroundColor: fullTimeResultClr2,
-                  borderColor: fullTimeResultBdr2,
+                  backgroundColor: (fullTimeResultIdx.length > 3 ? fullTimeResultClr2[0] : fullTimeResultClr2),
+                  borderColor: (fullTimeResultIdx.length > 3 ? fullTimeResultBdr2[0] : fullTimeResultBdr2),
                   borderWidth: 1
               }, {
                   label: 'X',
                   data: fullTimeResultX,
-                  backgroundColor: fullTimeResultClrX,
-                  borderColor: fullTimeResultBdrX,
+                  backgroundColor: (fullTimeResultIdx.length > 3 ? fullTimeResultClrX[0] : fullTimeResultClrX),
+                  borderColor: (fullTimeResultIdx.length > 3 ? fullTimeResultBdrX[0] : fullTimeResultBdrX),
                   borderWidth: 1
               }]
           },
@@ -396,20 +391,20 @@
 
       var underOverCtx = document.getElementById('under_over');
       var underOver = new Chart(underOverCtx, {
-          type: 'line',
+          type: (underOverIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: underOverIdx,
               datasets: [{
                   label: 'O2.5',
                   data: underOver1,
-                  backgroundColor: underOverClr1,
-                  borderColor: underOverBdr1,
+                  backgroundColor: (underOverIdx.length > 3 ? underOverClr1[0] : underOverClr1),
+                  borderColor: (underOverIdx.length > 3 ? underOverBdr1[0] : underOverBdr1),
                   borderWidth: 1
               }, {
                   label: 'U2.5',
                   data: underOver2,
-                  backgroundColor: underOverClr2,
-                  borderColor: underOverBdr2,
+                  backgroundColor: (underOverIdx.length > 3 ? underOverClr2[0] : underOverClr2),
+                  borderColor: (underOverIdx.length > 3 ? underOverBdr2[0] : underOverBdr2),
                   borderWidth: 1
               }]
           },
@@ -443,20 +438,20 @@
 
       var bothTeamsToScoreCtx = document.getElementById('both_teams_to_score');
       var bothTeamsToScore = new Chart(bothTeamsToScoreCtx, {
-          type: 'line',
+          type: (bothTeamsToScoreIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: bothTeamsToScoreIdx,
               datasets: [{
                   label: 'Yes',
                   data: bothTeamsToScore1,
-                  backgroundColor: bothTeamsToScoreClr1,
-                  borderColor: bothTeamsToScoreBdr1,
+                  backgroundColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreClr1[0] : bothTeamsToScoreClr1),
+                  borderColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreBdr1[0] : bothTeamsToScoreBdr1),
                   borderWidth: 1
               }, {
                   label: 'No',
                   data: bothTeamsToScore2,
-                  backgroundColor: bothTeamsToScoreClr2,
-                  borderColor: bothTeamsToScoreBdr2,
+                  backgroundColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreClr2[0] : bothTeamsToScoreClr2),
+                  borderColor: (bothTeamsToScoreIdx.length > 3 ? bothTeamsToScoreBdr2[0] : bothTeamsToScoreBdr2),
                   borderWidth: 1
               }]
           },
@@ -496,26 +491,26 @@
 
       var doubleChanceCtx = document.getElementById('double_chance');
       var doubleChance = new Chart(doubleChanceCtx, {
-          type: 'line',
+          type: (doubleChanceIdx.length > 3 ? 'line' : 'bar'),
           data: {
               labels: doubleChanceIdx,
               datasets: [{
                   label: '1X',
                   data: doubleChance1,
-                  backgroundColor: doubleChanceClr1,
-                  borderColor: doubleChanceBdr1,
+                  backgroundColor: (doubleChanceIdx.length > 3 ? doubleChanceClr1[0] : doubleChanceClr1),
+                  borderColor: (doubleChanceIdx.length > 3 ? doubleChanceBdr1[0] : doubleChanceBdr1),
                   borderWidth: 1
               }, {
                   label: '2X',
                   data: doubleChance2,
-                  backgroundColor: doubleChanceClr2,
-                  borderColor: doubleChanceBdr2,
+                  backgroundColor: (doubleChanceIdx.length > 3 ? doubleChanceClr2[0] : doubleChanceClr2),
+                  borderColor: (doubleChanceIdx.length > 3 ? doubleChanceBdr2[0] : doubleChanceBdr2),
                   borderWidth: 1
               }, {
                   label: '12',
                   data: doubleChanceX,
-                  backgroundColor: doubleChanceClrX,
-                  borderColor: doubleChanceBdrX,
+                  backgroundColor: (doubleChanceIdx.length > 3 ? doubleChanceClrX[0] : doubleChanceClrX),
+                  borderColor: (doubleChanceIdx.length > 3 ? doubleChanceBdrX[0] : doubleChanceBdrX),
                   borderWidth: 1
               }]
           },
@@ -540,7 +535,7 @@
       var time = data.time.replace("T", " ").replace("Z", " ");
 
       $('#main').append(`
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-sm-6 col-6">
           <article class="card">
             <a href="javascript:void(0);" data-key="${i}"><img style="width:80px" src="${thumb}" class="card-img-top" alt=""><img style="width:80px" src="${thumb2}" class="card-img-top" alt=""></a>
             <div class="card-body px-0">
@@ -567,7 +562,7 @@
       var time = data.time.replace("T", " ").replace("Z", " ");
 
       $('#main2').append(`
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 col-sm-6 col-6">
           <article class="card">
             <a href="javascript:void(0);" data-key="${i}"><img style="width:80px" src="${thumb}" class="card-img-top" alt=""><img style="width:80px" src="${thumb2}" class="card-img-top" alt=""></a>
             <div class="card-body px-0">
@@ -607,7 +602,7 @@
 			cookieBox.classList.remove('cookie-box-hide');
 			cookieButton.onclick = function () {
 				Cookies.set('cookie-box', true, {
-					expires: 2
+					expires:  2 
 				});
 				cookieBox.classList.add('cookie-box-hide');
 			};
